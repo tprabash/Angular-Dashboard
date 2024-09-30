@@ -50,7 +50,7 @@ You can find the Github Repo here.
 
 | Dashboard | User Profile | Tables | Icons | Notifications |
 | --- | --- | --- | --- | --- |
-| [![Start page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/dashboard.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/dashboard) | [![User profile page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/user-profile.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/user-profile) | [![Tables page ](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/tables.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/table-list) | [![Icons Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/icons.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/maps) | [![Notifications page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/notifications.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/notifications)
+| [![Start page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/dashboard.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/dashboard) | [![User profile page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/employees.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/employees) | [![Tables page ](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/tables.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/table-list) | [![Icons Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/icons.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/maps) | [![Notifications page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/notifications.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/notifications)
 
 [View More](https://demos.creative-tim.com/material-dashboard-angular2/#/dashboard).
 
@@ -59,7 +59,7 @@ You can find the Github Repo here.
 Quick start options:
 
 - [Download from Github](https://github.com/tiniestory/material-dashboard-angular2/archive/master.zip).
-- [Download from Creative Tim](http://www.creative-tim.com/product/material-dashboard-angular2).
+- [Download from UTE](http://www.creative-tim.com/product/material-dashboard-angular2).
 
 ## Deploy
 
@@ -164,11 +164,11 @@ material-dashboard-angular
 │   │   │   ├── upgrade.component.html
 │   │   │   ├── upgrade.component.spec.ts
 │   │   │   └── upgrade.component.ts
-│   │   └── user-profile
-│   │       ├── user-profile.component.css
-│   │       ├── user-profile.component.html
-│   │       ├── user-profile.component.spec.ts
-│   │       └── user-profile.component.ts
+│   │   └── employees
+│   │       ├── employees.component.css
+│   │       ├── employees.component.html
+│   │       ├── employees.component.spec.ts
+│   │       └── employees.component.ts
 │   ├── assets
 │   │   ├── css
 │   │   │   └── demo.css
@@ -226,16 +226,16 @@ If you have questions or need help integrating the product please [contact us](h
 
 ## Licensing
 
-- Copyright 2018 Creative Tim (https://www.creative-tim.com/)
+- Copyright 2018 UTE (https://www.creative-tim.com/)
 
 - Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-angular2/blob/master/LICENSE.md)
 
 
 ## Useful Links
 
-- [More products](https://www.creative-tim.com/bootstrap-themes) from Creative Tim
+- [More products](https://www.creative-tim.com/bootstrap-themes) from UTE
 - [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free) from Creative Tim
+- [Freebies](https://www.creative-tim.com/bootstrap-themes/free) from UTE
 - [Affiliate Program](https://www.creative-tim.com/affiliates/new) (earn money)
 
 ##### Social Media

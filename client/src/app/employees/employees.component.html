@@ -1,0 +1,174 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Employee Form</h4>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <!-- First Name Field -->
+                <div class="col-md-2">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="First Name"
+                      type="text"
+                      formControlName="firstName"
+                    />
+                    <mat-error *ngIf="employeeForm.get('firstName').hasError('required')">
+                      First Name is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <!-- Last Name Field -->
+                <div class="col-md-2">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Last Name"
+                      type="text"
+                      formControlName="lastName"
+                    />
+                    <mat-error *ngIf="employeeForm.get('lastName').hasError('required')">
+                      Last Name is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <!-- Email Field -->
+                <div class="col-md-2">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Email"
+                      type="email"
+                      formControlName="email"
+                    />
+                    <mat-error *ngIf="employeeForm.get('email').hasError('email')">
+                      Enter a valid email
+                    </mat-error>
+                    <mat-error *ngIf="employeeForm.get('email').hasError('required')">
+                      Email is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <!-- Date of Birth Field -->
+                <div class="col-md-1">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Date Of Birth"
+                      type="date"
+                      formControlName="dob"
+                    />
+                  </mat-form-field>
+                </div>
+                <!-- Age Field -->
+                <div class="col-md-1">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Age"
+                      type="number"
+                      formControlName="age"
+                    />
+                  </mat-form-field>
+                </div>
+                <!-- Salary Field -->
+                <div class="col-md-1">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Salary"
+                      type="number"
+                      formControlName="salary"
+                    />
+                  </mat-form-field>
+                </div>
+                <!-- Department Name Field -->
+                <div class="col-md-2">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Department Name"
+                      type="text"
+                      formControlName="departmentName"
+                    />
+                  </mat-form-field>
+                </div>
+                <!-- Department Code Field -->
+                <div class="col-md-1">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Department Code"
+                      type="text"
+                      formControlName="departmentCode"
+                    />
+                  </mat-form-field>
+                </div>
+              </div>
+              <!-- Submit Button -->
+              <button mat-raised-button type="submit" class="btn btn-danger pull-right">
+                Add Employee
+              </button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Employee List -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Employee List</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Date of Birth</th>
+                    <th>Age</th>
+                    <th>Salary</th>
+                    <th>Department Name</th>
+                    <th>Code</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let employee of employees">
+                    <td>{{ employee.firstName }}</td>
+                    <td>{{ employee.lastName }}</td>
+                    <td>{{ employee.email }}</td>
+                    <td>{{ employee.dob }}</td>
+                    <td>{{ employee.age }}</td>
+                    <td>{{ employee.salary }}</td>
+                    <td>{{ employee.departmentName }}</td>
+                    <td>{{ employee.departmentCode }}</td>
+                    <td class="text-center">
+                      <button class="btn btn-info" mat-button (click)="onEdit(employee)">
+                        Edit
+                      </button>
+                      <button class="btn btn-danger" mat-button (click)="onDelete(employee.id)">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

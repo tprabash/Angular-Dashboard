@@ -1,0 +1,123 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Department Form</h4>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="departmentForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <!-- Department Name Field -->
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Department Name"
+                      type="text"
+                      formControlName="departmentName"
+                    />
+                    <!-- Validation Errors for Department Name -->
+                    <mat-error *ngIf="departmentForm.get('departmentName').hasError('required') && departmentForm.get('departmentName').touched">
+                      Department Name is required
+                    </mat-error>
+                    <mat-error *ngIf="departmentForm.get('departmentName').hasError('minlength') && departmentForm.get('departmentName').touched">
+                      Department Name must be at least 3 characters long
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <!-- Department Code Field -->
+                <div class="col-md-4">
+                  <mat-form-field class="example-full-width">
+                    <input
+                      matInput
+                      placeholder="Department Code"
+                      type="text"
+                      formControlName="departmentCode"
+                    />
+                    <!-- Validation Errors for Department Code -->
+                    <mat-error *ngIf="departmentForm.get('departmentCode').hasError('required') && departmentForm.get('departmentCode').touched">
+                      Department Code is required
+                    </mat-error>
+                    <mat-error *ngIf="departmentForm.get('departmentCode').hasError('pattern') && departmentForm.get('departmentCode').touched">
+                      Department Code must be alphanumeric and uppercase
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <button
+                *ngIf="departmentForm.get('id')?.value == 0"
+                mat-raised-button
+                type="submit"
+                class="btn btn-success pull-right"
+                [disabled]="departmentForm.invalid"
+              >
+                Add Department
+              </button>
+              <button
+                *ngIf="departmentForm.get('id')?.value != 0"
+                mat-raised-button
+                type="submit"
+                class="btn btn-primary pull-right"
+                [disabled]="departmentForm.invalid"
+              >
+                Update Department
+              </button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Employee List Section -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Employee List</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Department Name</th>
+                    <th>Department Code</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let department of departments">
+                    <td>{{ department.departmentName }}</td>
+                    <td>{{ department.departmentCode }}</td>
+                    <td class="text-center">
+                      <button
+                        class="btn btn-info"
+                        mat-button
+                        (click)="onEdit(department)"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        class="btn btn-danger"
+                        mat-button
+                        (click)="onDelete(department.id)"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
