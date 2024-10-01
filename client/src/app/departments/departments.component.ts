@@ -35,16 +35,20 @@ export class DepartmentsComponent implements OnInit {
   }
 
   onDelete(departmentId: number) {
-    this.departmentService.deleteDepartment(departmentId).subscribe(
-      () => {
-        this.departments = this.departments.filter(department => department.id !== departmentId);
-        this.toastr.success('Department deleted successfully!');
-      },
-      error => {
-        console.error('Error deleting department', error);
-        this.toastr.error('Error deleting department!');
-      }
-    );
+    const confirmed = window.confirm('Are you sure you want to delete this department?');
+  
+    if (confirmed) {
+      this.departmentService.deleteDepartment(departmentId).subscribe(
+        () => {
+          this.departments = this.departments.filter(department => department.id !== departmentId);
+          this.toastr.success('Department deleted successfully!');
+        },
+        error => {
+          console.error('Error deleting department', error);
+          this.toastr.error('Error deleting department!');
+        }
+      );
+    }
   }
 
   onSubmit() {

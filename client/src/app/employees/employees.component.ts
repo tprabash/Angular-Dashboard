@@ -24,10 +24,10 @@ export class EmployeesComponent implements OnInit {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      dob: [''],
-      age: [''],
-      salary: [''],
-      departmentName: [''],
+      dob: ['', Validators.required],
+      age: ['', Validators.required],
+      salary: ['', Validators.required],
+      departmentName: ['', Validators.required],
       departmentCode: ['']
     });
   }
